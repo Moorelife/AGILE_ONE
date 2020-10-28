@@ -158,7 +158,8 @@ namespace NeuronEngine
 
 	void NeuronArrayBase::GetBounds(int taskID, int& start, int& end)
 	{
-		int numberToProcess = arraySize / threadCount;
+#ifdef PARALLEL_PROCESSING
+        int numberToProcess = arraySize / threadCount;
 		int remainder = arraySize % threadCount;
 		start = numberToProcess * taskID;
 		end = start + numberToProcess;
@@ -172,6 +173,10 @@ namespace NeuronEngine
 			start += remainder;
 			end += remainder;
 		}
+#else
+        start = 0;
+        end = arraySize;
+#endif
 	}
 	void NeuronArrayBase::Fire()
 	{
@@ -188,8 +193,8 @@ namespace NeuronEngine
 			ProcessNeurons2(value);
 			});
 #else
-		ProcessNeurons1(1);
-		ProcessNeurons2(1);
+        ProcessNeurons1(threadCount);
+        ProcessNeurons2(threadCount);
 #endif
 	}
 	int NeuronArrayBase::GetFiredCount()

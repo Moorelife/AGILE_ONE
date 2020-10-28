@@ -1,0 +1,31 @@
+moorelife@Octoprint-Develop:~/Desktop/AGILE_ONE/src$ ./CppEngineTest
+Running tests...run with debugger to verify
+1000000 neurons allocated 93ms
+Using 124 threads. 
+Allocating 100000000 synapses . Each dot is 1000000 synapses 
+
+100000000 random synapses requested  Actual: 760722 synapses  alocated 597ms
+firing loop Start 754ms
+fired: 5109 neurons,   34ms
+fired: 8049 neurons,   55ms
+fired: 8046 neurons,   56ms
+fired: 8043 neurons,   57ms
+fired: 8040 neurons,   53ms
+fired: 8039 neurons,   55ms
+fired: 8038 neurons,   59ms
+fired: 8038 neurons,   56ms
+fired: 8038 neurons,   55ms
+fired: 8038 neurons,   55ms
+fired: 8038 neurons,   57ms
+fired: 8038 neurons,   58ms
+fired: 8038 neurons,   55ms
+fired: 8038 neurons,   55ms
+fired: 8038 neurons,   53ms
+fired: 8038 neurons,   55ms
+fired: 8038 neurons,   56ms
+fired: 8038 neurons,   54ms
+fired: 8038 neurons,   57ms
+fired: 8038 neurons,   57ms
+Done 0ms
+Press enter
+ 

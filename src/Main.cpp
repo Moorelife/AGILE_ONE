@@ -128,7 +128,7 @@ int main(int argc, char* argv[], char* envp[])
 #else
     neuronCount = 1'000'000;
     synapsesPerNeuron = 100;
-	threadCount = 2;
+	threadCount = 1;
     synapsesPerDot = 1'000'000;
 	cyclesPerFiring = 1;
 #endif // DEBUG
@@ -168,14 +168,15 @@ int main(int argc, char* argv[], char* envp[])
 		}
 	});
 #else
-	int start, end;
-	neuronArray->GetBounds(1, start, end);
+	int start = 0;
+    int end = neuronCount;
+	
     printf("Start: %d End: %d  \n", start, end);
 	for (int i = start; i < end; i++)
 	{
-		NeuronBase* n = neuronArray->GetNeuron(i+1);
+		NeuronBase* n = neuronArray->GetNeuron(i);
 		//n->AddSynapse(n, 1, false, true);
-		for (int j = 1; j < synapsesPerNeuron; j++)
+        for (int j = 1; j < synapsesPerNeuron; j++)
 		{
 			int target = i+ rd() % 1'000;
 			//int target = j;
@@ -192,8 +193,12 @@ int main(int argc, char* argv[], char* envp[])
 	outputElapsedTime(s);
 
 	//select some neurons to be firing (all the time based on synapses
-	for (int i = 0; i < neuronCount / cyclesPerFiring; i++)
-	{
+#ifdef PARALLEL_PROCESSING
+    for (int i = 0; i < neuronCount / cyclesPerFiring; i++)
+#else
+    for (int i = 0; i < neuronCount; i++)
+#endif
+    {
 		int target = rd() % neuronArray->GetArraySize();
 		//int target = i;
 		neuronArray->GetNeuron(target)->SetCurrentCharge(1);

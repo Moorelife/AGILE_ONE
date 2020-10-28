@@ -1,32 +1,31 @@
-moorelife@Octoprint-Develop:~/Desktop/AGILE_ONE/src$ ./CppEngineTest
+moorelife@Develop:~/Desktop/AGILE_ONE/src$ ./CppEngineTest
 Running tests...run with debugger to verify
-1000000 neurons allocated 68ms
-Using 2 threads. 
+1000000 neurons allocated 61ms
+Using 1 threads. 
 Allocating 100000000 synapses . Each dot is 1000000 synapses 
-Start: 500000 End: 1000000  
-.................................................
-100000000 random synapses requested  Actual: 47150676 synapses  alocated 34754ms
-firing loop Start 717ms
-fired: 315603 neurons,   1955ms
-fired: 499984 neurons,   2970ms
-fired: 499981 neurons,   2993ms
-fired: 499979 neurons,   3005ms
-fired: 499979 neurons,   3101ms
-fired: 499979 neurons,   3438ms
-fired: 499979 neurons,   3025ms
-fired: 499979 neurons,   3047ms
-fired: 499979 neurons,   3012ms
-fired: 499979 neurons,   3011ms
-fired: 499979 neurons,   3015ms
-fired: 499979 neurons,   3002ms
-fired: 499979 neurons,   3006ms
-fired: 499979 neurons,   2998ms
-fired: 499979 neurons,   3019ms
-fired: 499979 neurons,   2997ms
-fired: 499979 neurons,   2981ms
-fired: 499979 neurons,   2988ms
-fired: 499979 neurons,   2973ms
-fired: 499979 neurons,   2997ms
+Start: 0 End: 1000000  
+...................................................................................................
+100000000 random synapses requested  Actual: 94301179 synapses  alocated 72131ms
+firing loop Start 812ms
+fired: 632081 neurons,   4192ms
+fired: 1000000 neurons,   6473ms
+fired: 1000000 neurons,   6497ms
+fired: 1000000 neurons,   6453ms
+fired: 1000000 neurons,   6520ms
+fired: 1000000 neurons,   6579ms
+fired: 1000000 neurons,   6536ms
+fired: 1000000 neurons,   6523ms
+fired: 1000000 neurons,   6461ms
+fired: 1000000 neurons,   6590ms
+fired: 1000000 neurons,   6483ms
+fired: 1000000 neurons,   6459ms
+fired: 1000000 neurons,   6481ms
+fired: 1000000 neurons,   6478ms
+fired: 1000000 neurons,   6479ms
+fired: 1000000 neurons,   6502ms
+fired: 1000000 neurons,   6469ms
+fired: 1000000 neurons,   6440ms
+fired: 1000000 neurons,   6459ms
+fired: 1000000 neurons,   6634ms
 Done 0ms
 Press enter
-

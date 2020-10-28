@@ -153,7 +153,7 @@ int main(int argc, char* argv[], char* envp[])
 		neuronArray->GetBounds(value, start, end);
 		for (int i = start; i < end; i++)
 		{
-			NeuronBase* n = neuronArray->GetNeuron(i+1);
+			NeuronBase* n = neuronArray->GetNeuron(i);
 			//n->AddSynapse(n, 1, false, true);
 			for (int j = 1; j < synapsesPerNeuron; j++)
 			{
